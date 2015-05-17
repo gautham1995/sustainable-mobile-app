@@ -3,7 +3,7 @@
         <div class="item card-item">
             <div ui-sref="app.gallery" class="card stable-bg ink ink-dark">
                 <div class="item item-avatar item-text-wrap">
-                    <span class="avatar" style="background-image: url('img/wsj.png');"></span>
+                    <span class="avatar" style="background-image: url('img/wsj.jpeg');"></span>
                     Samsung was the only company to outsell <strong>Apple</strong> in smartphones last year http://on.wsj.com/1zUN2sp
                     <div class="card-footer text-right">
                         <i class="icon ion-arrow-return-left positive"></i> 205
@@ -18,7 +18,7 @@
         <div ng-repeat="tweet in tweets" class="item card-item">
           <div ui-sref="app.gallery" class="card stable-bg ink ink-dark">
               <div class="item item-avatar item-text-wrap">
-                  <span class="avatar" style="background-image: url('img/wsj.png');"></span>
+                  <span class="avatar" style="background-image: url({{tweet.img}});"></span>
                   {{ tweet.tweet }}
                   <div class="card-footer text-right">
                       <i class="icon ion-arrow-return-left positive"></i> {{ tweet.retweet }}
