@@ -109,9 +109,16 @@ angular.module('starter.controllers', [])
 
 	// Set Ink
 	ionic.material.ink.displayEffect();
+
+	$scope.links = [{
+		'name': 'Foxxcon',
+	}, {
+		'name': 'Safaire',
+	}];
+	console.log($scope.links)
 })
 
-.controller('ProfileCtrl', function($scope, $stateParams, $timeout) {
+.controller('ProfileCtrl', function($scope, $stateParams, $timeout, $http) {
 	// Set Header
 	$scope.$parent.showHeader();
 	$scope.$parent.clearFabs();
@@ -135,6 +142,16 @@ angular.module('starter.controllers', [])
 	// Set Ink
 	ionic.material.ink.displayEffect();
 
+	$http.get('http://yahoo-fin.herokuapp.com/now/AAPL').then(function(resp) {
+		// console.log('Success', resp);
+		// For JSON responses, resp.data contains the result
+		$scope.companyStock = resp['data'];
+		console.log($scope.companyStock);
+	}, function(err) {
+		console.error('ERR', err);
+		// err.status will contain the status code
+	})
+
 	$scope.company = {
 		'name': 'Apple'
 	}
@@ -155,6 +172,22 @@ angular.module('starter.controllers', [])
 
 	// Activate ink for controller
 	ionic.material.ink.displayEffect();
+	$scope.tweets = [{
+		'tweet': 'The first smarthome gadgets that work with <strong>Apple\'s</strong> HomeKit will arrive next month: http://on.wsj.com/1IE0mTt  ',
+		'retweet': '0',
+		'fav': '1',
+		'time': '11 June'
+	}, {
+		'tweet': 'Test',
+		'retweet': '0',
+		'fav': '1',
+		'time': '11 June'
+	}, {
+		'tweet': 'Test',
+		'retweet': '0',
+		'fav': '1',
+		'time': '11 June'
+	}, ];
 })
 
 .controller('GalleryCtrl', function($scope, $stateParams, $timeout) {
