@@ -162,6 +162,45 @@ angular.module('starter.controllers', [])
 	}
 })
 
+.controller('FoxCtrl', function($scope, $stateParams, $timeout, $http) {
+	// Set Header
+	$scope.$parent.showHeader();
+	$scope.$parent.clearFabs();
+	$scope.isExpanded = false;
+	$scope.$parent.setExpanded(false);
+	$scope.$parent.setHeaderFab(false);
+
+	// Set Motion
+	$timeout(function() {
+		ionic.material.motion.slideUp({
+			selector: '.slide-up'
+		});
+	}, 300);
+
+	$timeout(function() {
+		ionic.material.motion.fadeSlideInRight({
+			startVelocity: 3000
+		});
+	}, 700);
+
+	// Set Ink
+	ionic.material.ink.displayEffect();
+
+	$http.get('http://yahoo-fin.herokuapp.com/now/AAPL').then(function(resp) {
+		// console.log('Success', resp);
+		// For JSON responses, resp.data contains the result
+		$scope.companyStock = resp['data'];
+		console.log($scope.companyStock);
+	}, function(err) {
+		console.error('ERR', err);
+		// err.status will contain the status code
+	})
+
+	$scope.company = {
+		'name': 'Foxxcon'
+	}
+})
+
 .controller('ActivityCtrl', function($scope, $stateParams, $timeout) {
 	$scope.$parent.showHeader();
 	$scope.$parent.clearFabs();

@@ -19,7 +19,7 @@
           <div ui-sref="app.gallery" class="card stable-bg ink ink-dark">
               <div class="item item-avatar item-text-wrap">
                   <span class="avatar" style="background-image: url({{tweet.img}});"></span>
-                  {{ tweet.tweet }}
+                    <span ng-bind-html="tweet.tweet"></span>
                   <div class="card-footer text-right">
                       <i class="icon ion-arrow-return-left positive"></i> {{ tweet.retweet }}
                       <i class="icon ion-star assertive"></i> {{ tweet.fav }}

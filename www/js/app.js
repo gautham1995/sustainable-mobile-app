@@ -56,6 +56,16 @@ angular.module('starter', ['ionic', 'starter.controllers'])
 		}
 	})
 
+	.state('app.profile_fox', {
+		url: '/fox',
+		views: {
+			'menuContent': {
+				templateUrl: 'templates/profile_fox.html',
+				controller: 'FoxCtrl'
+			}
+		}
+	})
+
 	.state('app.friends', {
 		url: '/friends',
 		views: {
