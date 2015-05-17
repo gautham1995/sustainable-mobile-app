@@ -92,6 +92,41 @@ angular.module('starter.controllers', [])
 	ionic.material.ink.displayEffect();
 })
 
+.controller('SusCtrl', function($scope, $stateParams, $timeout) {
+	// Set Header
+	$scope.$parent.showHeader();
+	$scope.$parent.clearFabs();
+	$scope.$parent.setHeaderFab('left');
+
+	// Delay expansion
+	$timeout(function() {
+		$scope.isExpanded = true;
+		$scope.$parent.setExpanded(true);
+	}, 300);
+
+	// Set Motion
+	ionic.material.motion.fadeSlideInRight();
+
+	// Set Ink
+	ionic.material.ink.displayEffect();
+
+	$scope.links = [{
+		'name': 'Foxxcon',
+		'img': 'img/foxconn.jpeg',
+		'desc': 'Taiwanese multinational electronics contract manufacturing company'
+	}, {
+		'name': 'Beats',
+		'img': 'img/beats.png',
+		'desc': 'Beats Electronics, recently bought by apple.'
+	}, {
+		'name': 'AuthenTec',
+		'img': 'img/authen.jpeg',
+		'desc': 'semiconductor, computer security, mobile security, identity management company'
+	}];
+	console.log($scope.links)
+})
+
+
 .controller('FriendsCtrl', function($scope, $stateParams, $timeout) {
 	// Set Header
 	$scope.$parent.showHeader();

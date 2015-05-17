@@ -116,6 +116,16 @@ angular.module('starter', ['ionic', 'starter.controllers'])
 		}
 	})
 
+	.state('app.sustain', {
+		url: '/sustain',
+		views: {
+			'menuContent': {
+				templateUrl: 'templates/sus.html',
+				controller: 'SusCtrl'
+			}
+		}
+	})
+
 	.state('app.profile', {
 		url: '/profile',
 		views: {
