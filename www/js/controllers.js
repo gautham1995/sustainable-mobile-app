@@ -160,6 +160,16 @@ angular.module('starter.controllers', [])
 		// err.status will contain the status code
 	})
 
+	$http.get('http://yahoo-fin.herokuapp.com/news/AAPL').then(function(resp) {
+		// console.log('Success', resp);
+		// For JSON responses, resp.data contains the result
+		$scope.news = resp['data'];
+		console.log($scope.news);
+	}, function(err) {
+		console.error('ERR', err);
+		// err.status will contain the status code
+	})
+
 	$scope.company = {
 		'name': 'Apple'
 	}
