@@ -30,14 +30,8 @@
           <div ui-sref="app.profile_fox" class="card stable-bg ink ink-dark">
               <div class="item item-avatar item-text-wrap">
                   <span class="avatar" style="background-image: url({{link.img}});"></span>
-                  {{ link.name }}
-                  <div class="card-footer text-right">
-                      <i class="icon ion-arrow-return-left positive"></i> {{ tweet.retweet }}
-                      <i class="icon ion-star assertive"></i> {{ tweet.fav }}
-                      <div class="pull-left">
-                          <i class="icon ion-clock"></i> {{ tweet.time }}
-                      </div>
-                  </div>
+                  <h2>{{ link.name }}</h2>
+                  <p>{{link.desc}}</p>
               </div>
           </div>
         </div>

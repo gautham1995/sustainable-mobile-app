@@ -113,12 +113,15 @@ angular.module('starter.controllers', [])
 	$scope.links = [{
 		'name': 'Foxxcon',
 		'img': 'img/foxconn.jpeg',
+		'desc': 'Taiwanese multinational electronics contract manufacturing company'
 	}, {
 		'name': 'Beats',
 		'img': 'img/beats.png',
+		'desc': 'Beats Electronics, recently bought by apple.'
 	}, {
 		'name': 'AuthenTec',
 		'img': 'img/authen.jpeg',
+		'desc': 'semiconductor, computer security, mobile security, identity management company'
 	}];
 	console.log($scope.links)
 })
