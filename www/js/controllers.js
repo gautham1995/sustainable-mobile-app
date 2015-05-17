@@ -176,17 +176,20 @@ angular.module('starter.controllers', [])
 		'tweet': 'The first smarthome gadgets that work with <strong>Apple\'s</strong> HomeKit will arrive next month: http://on.wsj.com/1IE0mTt  ',
 		'retweet': '0',
 		'fav': '1',
-		'time': '11 June'
+		'time': '11 June',
+		'img': 'img/wsj.jpeg'
 	}, {
 		'tweet': 'Test',
 		'retweet': '0',
 		'fav': '1',
-		'time': '11 June'
+		'time': '11 June',
+		'img': 'img/wsj.jpeg'
 	}, {
 		'tweet': 'Test',
 		'retweet': '0',
 		'fav': '1',
-		'time': '11 June'
+		'time': '11 June',
+		'img': 'img/wsj.jpeg'
 	}, ];
 })
 
