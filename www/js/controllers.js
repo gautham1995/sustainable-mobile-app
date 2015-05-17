@@ -112,8 +112,13 @@ angular.module('starter.controllers', [])
 
 	$scope.links = [{
 		'name': 'Foxxcon',
+		'img': 'img/foxconn.jpeg',
 	}, {
-		'name': 'Safaire',
+		'name': 'Beats',
+		'img': 'img/beats.png',
+	}, {
+		'name': 'AuthenTec',
+		'img': 'img/authen.jpeg',
 	}];
 	console.log($scope.links)
 })
