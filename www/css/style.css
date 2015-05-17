@@ -23,6 +23,11 @@ p {
     height: 100%;
 }
 
+.green {
+  background: #2ecc71;
+  border-color: #32ca31;
+  color: #056f00;
+}
 
 /* Menu
 ==================================*/

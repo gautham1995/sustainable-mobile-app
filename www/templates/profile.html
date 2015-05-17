@@ -8,7 +8,7 @@
   background-position-y: 3px;
   background-repeat: no-repeat;"></div>
                 <h3><a class="light">{{company.name}}</a></h3>
-                <h4>{{ companyStock.name }}  {{ companyStock.price }} <span class="ion-arrow-down-b"></span> (0.00%)</h4>
+                <h4>{{ companyStock.name }}  ${{ companyStock.price }} <span class="ion-arrow-down-b"></span> (0.00%)</h4>
             </div>
         </div>
         <div class="tabs tabs-dark tabs-icon-top static">
@@ -27,7 +27,20 @@
                 <div ui-sref="app.profile" class="card card-gallery item item-text-wrap">
                     <div class="ink dark-bg">
                         <h2>Sentiment Analysis</h2>
-                        <img class="full-image" src="img/twitter2-720x540.jpg">
+<div class="col-lg-3 col-md-3">
+<div></div>
+<div class="card clickable force-height green" id="rating" style="text-align: center;   margin: 0px;">
+<br>
+<br>
+<h4 data-placement="left" data-toggle="tooltip" style="float:right;margin-top:-40px;margin-right:-15px" title="" data-original-title="This is the composite score Cappio has calculated for this company by adding the four scores below.">
+
+</h4>
+<span class="glyphicon ion-thumbsup" style="font-size: 40px;"></span>
+<br>
+<br>
+<br>
+</span></div>
+</div>
                     </div>
                     <div class="item tabs tabs-secondary tabs-icon-left">
                         <a class="tab-item stable-bg assertive">
