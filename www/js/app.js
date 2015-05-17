@@ -126,6 +126,16 @@ angular.module('starter', ['ionic', 'starter.controllers'])
 		}
 	})
 
+	.state('app.eco', {
+		url: '/eco',
+		views: {
+			'menuContent': {
+				templateUrl: 'templates/eco.html',
+				controller: 'EcoCtrl'
+			}
+		}
+	})
+
 	.state('app.profile', {
 		url: '/profile',
 		views: {
