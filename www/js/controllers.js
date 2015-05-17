@@ -185,7 +185,7 @@ angular.module('starter.controllers', [])
 	// Set Ink
 	ionic.material.ink.displayEffect();
 
-	$http.get('http://yahoo-fin.herokuapp.com/now/AAPL').then(function(resp) {
+	$http.get('http://yahoo-fin.herokuapp.com/news/AAPL').then(function(resp) {
 		// console.log('Success', resp);
 		// For JSON responses, resp.data contains the result
 		$scope.companyStock = resp['data'];
