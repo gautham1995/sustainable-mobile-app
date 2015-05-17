@@ -174,23 +174,44 @@ angular.module('starter.controllers', [])
 	ionic.material.ink.displayEffect();
 	$scope.tweets = [{
 		'tweet': 'The first smarthome gadgets that work with <strong>Apple\'s</strong> HomeKit will arrive next month: http://on.wsj.com/1IE0mTt  ',
-		'retweet': '0',
-		'fav': '1',
-		'time': '11 June',
+		'retweet': '21',
+		'fav': '14',
+		'time': '4h',
 		'img': 'img/wsj.jpeg'
 	}, {
-		'tweet': 'Test',
-		'retweet': '0',
-		'fav': '1',
-		'time': '11 June',
+		'tweet': '<strong>Apple</strong> says that HomeKit is NOT delayed, despite reports saying it was pushed back: http://on.wsj.com/1RKNnDI  by @daiwaka ',
+		'retweet': '6',
+		'fav': '6',
+		'time': 'May 14',
 		'img': 'img/wsj.jpeg'
 	}, {
-		'tweet': 'Test',
-		'retweet': '0',
+		'tweet': '<strong>Apple</strong> agrees to settle legal case: Apple denied that it poached staff from battery-maker A123, but has agreed ... http://bbc.in/1RIUNHz ',
+		'retweet': '1',
 		'fav': '1',
-		'time': '11 June',
-		'img': 'img/wsj.jpeg'
-	}, ];
+		'time': 'May 14',
+		'img': 'img/bbc.jpg'
+	}, {
+		'tweet': 'With resale prices skyrocketing, it\'s too easy for thieves to sell a stolen <strong>Apple</strong> Watch http://t.co/CQ5oAULT0E … ',
+		'retweet': '38',
+		'fav': '33',
+		'time': 'May 15',
+		'img': 'img/verge.png'
+	}, {
+		'tweet': 'The first <strong>Apple</strong> HomeKit devices are coming next month http://t.co/LakiUYVzL4',
+		'retweet': '70',
+		'fav': '64',
+		'time': 'May 14',
+		'img': 'img/verge.png'
+	}, {
+		'tweet': 'Apple and China\'s love affair surges as Tim Cook visits Beijing http://t.co/pAwuEwSWYE',
+		'retweet': '48',
+		'fav': '32',
+		'time': 'May 12',
+		'img': 'img/time.png'
+	}];
+
+	console.log($scope.tweets);
+
 })
 
 .controller('GalleryCtrl', function($scope, $stateParams, $timeout) {
