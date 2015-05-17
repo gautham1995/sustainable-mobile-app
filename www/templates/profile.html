@@ -21,26 +21,43 @@
                 <i class="icon ion-images"></i> Photos
             </a> -->
         </div>
-        <h4 class="content padding double-padding-x">Following</h4>
-        <div class="list animate-fade-slide-in-right">
-            <a ui-sref="app.friends" class="item item-avatar item-icon-right">
-                <img src="img/jon-snow.jpg">
-                <h2>Jon Snow</h2>
-                <p>Da illest illegitimate</p>
-                <i class="icon ion-chatbubble muted"></i>
-            </a>
-            <a ui-sref="app.friends" class="item item-avatar item-icon-right">
-                <img src="img/sansa.jpg">
-                <h2>Sansa Stark</h2>
-                <p>&amp; Joffrey <strike>sitting</strike> sat in a tree</p>
-                <i class="icon ion-chatbubble muted"></i>
-            </a>
-            <a ui-sref="app.friends" class="item item-avatar item-icon-right">
-                <img src="img/tyrion.jpg">
-                <h2>Tyrion Lannister</h2>
-                <p>B.A.M.F. imp</p>
-                <i class="icon ion-chatbubble muted"></i>
-            </a>
+        <div ng-class="{expanded:true}" class="scroll" style="-webkit-transform: translate3d(0px, 0px, 0px) scale(1);">
+            <div class="list half">
+                <div ui-sref="app.profile" class="card card-gallery item item-text-wrap">
+                    <div class="ink dark-bg">
+                        <h2>Sentiment Analysis</h2>
+                        <img class="full-image" src="img/twitter2-720x540.jpg">
+                    </div>
+                    <div class="item tabs tabs-secondary tabs-icon-left">
+                        <a class="tab-item stable-bg assertive">
+                            <i class="icon ion-heart"></i>
+                            4
+                        </a>
+                        <a class="tab-item stable-bg positive-900">
+                            <i class="icon ion-chatbubbles"></i>
+                            2
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="list half">
+                <div ui-sref="app.profile" class="card card-gallery item item-text-wrap">
+                    <div class="ink dark-bg">
+                        <h2>News</h2>
+                        <img class="full-image" src="img/news.jpg">
+                    </div>
+                    <div class="item tabs tabs-secondary tabs-icon-left">
+                        <a class="tab-item stable-bg assertive">
+                            <i class="icon ion-heart"></i>
+                            6
+                        </a>
+                        <a class="tab-item stable-bg positive-900">
+                            <i class="icon ion-chatbubbles"></i>
+                            1
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
     </ion-content>
 </ion-view>
