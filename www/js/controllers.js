@@ -181,6 +181,35 @@ angular.module('starter.controllers', [])
 	console.log($scope.links)
 })
 
+.controller('NewsCtrl', function($scope, $stateParams, $timeout, $http) {
+	// Set Header
+	$scope.$parent.showHeader();
+	$scope.$parent.clearFabs();
+	$scope.$parent.setHeaderFab('left');
+
+	// Delay expansion
+	$timeout(function() {
+		$scope.isExpanded = true;
+		$scope.$parent.setExpanded(true);
+	}, 300);
+
+	// Set Motion
+	ionic.material.motion.fadeSlideInRight();
+
+	// Set Ink
+	ionic.material.ink.displayEffect();
+
+
+	$http.get('http://yahoo-fin.herokuapp.com/news/AAPL').then(function(resp) {
+		// console.log('Success', resp);
+		// For JSON responses, resp.data contains the result
+		$scope.news = resp['data'];
+		console.log($scope.news);
+	}, function(err) {
+		console.error('ERR', err);
+		// err.status will contain the status code
+	})
+})
 .controller('ProfileCtrl', function($scope, $stateParams, $timeout, $http) {
 	// Set Header
 	$scope.$parent.showHeader();

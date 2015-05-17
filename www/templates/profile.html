@@ -55,26 +55,24 @@
                 </div>
             </div>
             <div class="list half">
-                <div ui-sref="app.profile" class="card card-gallery item item-text-wrap">
+                <div ui-sref="app.news" class="card card-gallery item item-text-wrap">
                     <div class="ink dark-bg">
                         <h2>News</h2>
                         <div style="  color: #ffffff;
   background: #EBEFF2;
   /* margin: 5px 5px; */
   padding: 0px 10px;
-  min-height: 200px;
   -webkit-transition: all .1s ease-out;
   transition: all .1s ease-out;
   overflow: hidden;
   -webkit-box-shadow: 0px 2px 10px 3px rgba(0,0,0,0.03);
   box-shadow: 0px 2px 10px 3px rgba(0,0,0,0.03);
   overflow: hidden;">
-                            <div ng-repeat="n in news" style="padding-top: 10px;">
+                            <div ng-repeat="n in news | limitTo: 4" style="padding-top: 10px;">
 <h6>
 
 <div style="padding:0px; margin-bottom:1.5em;">
 <span>{{n.title}}</span>
-<a href="{{n.link}}">more</a>
 
 
 </div>
@@ -83,15 +81,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="item tabs tabs-secondary tabs-icon-left">
-                        <a class="tab-item stable-bg assertive">
-                            <i class="icon ion-heart"></i>
-                            6
-                        </a>
-                        <a class="tab-item stable-bg positive-900">
-                            <i class="icon ion-chatbubbles"></i>
-                            1
-                        </a>
+
                     </div>
                 </div>
             </div>

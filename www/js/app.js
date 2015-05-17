@@ -85,6 +85,24 @@ angular.module('starter', ['ionic', 'starter.controllers'])
 		}
 	})
 
+	.state('app.news', {
+		url: '/news',
+		views: {
+			'menuContent': {
+				templateUrl: 'templates/news.html',
+				controller: 'NewsCtrl'
+			}
+			// ,
+			// 'fabContent': {
+			// 	template: '<button id="fab-friends" class="button button-fab button-fab-top-left expanded button-energized-900 spin"><i class="icon ion-chatbubbles"></i></button>',
+			// 	controller: function($timeout) {
+			// 		$timeout(function() {
+			// 			document.getElementById('fab-friends').classList.toggle('on');
+			// 		}, 900);
+			// 	}
+			// }
+		}
+	})
 	.state('app.gallery', {
 		url: '/gallery',
 		views: {
