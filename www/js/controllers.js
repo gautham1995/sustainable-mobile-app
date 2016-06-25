@@ -89,7 +89,7 @@ angular.module('starter.controllers', [])
 	$timeout(function() {
 		$scope.$parent.hideHeader();
 	}, 0);
-	ionic.material.ink.displayEffect();
+	ionicMaterialInk.displayEffect();
 })
 
 .controller('SusCtrl', function($scope, $stateParams, $timeout) {
@@ -108,7 +108,7 @@ angular.module('starter.controllers', [])
 	ionic.material.motion.fadeSlideInRight();
 
 	// Set Ink
-	ionic.material.ink.displayEffect();
+	ionicMaterialInk.displayEffect();
 
 	$scope.links = [{
 		'name': 'Foxxcon',
@@ -142,7 +142,7 @@ angular.module('starter.controllers', [])
 	ionic.material.motion.fadeSlideInRight();
 
 	// Set Ink
-	ionic.material.ink.displayEffect();
+	ionicMaterialInk.displayEffect();
 
 })
 
@@ -163,7 +163,7 @@ angular.module('starter.controllers', [])
 	ionic.material.motion.fadeSlideInRight();
 
 	// Set Ink
-	ionic.material.ink.displayEffect();
+	ionicMaterialInk.displayEffect();
 
 	$scope.links = [{
 		'name': 'Foxxcon',
@@ -197,7 +197,7 @@ angular.module('starter.controllers', [])
 	ionic.material.motion.fadeSlideInRight();
 
 	// Set Ink
-	ionic.material.ink.displayEffect();
+	ionicMaterialInk.displayEffect();
 
 
 	$http.get('http://yahoo-fin.herokuapp.com/news/AAPL').then(function(resp) {
@@ -232,7 +232,7 @@ angular.module('starter.controllers', [])
 	}, 700);
 
 	// Set Ink
-	ionic.material.ink.displayEffect();
+	ionicMaterialInk.displayEffect();
 
 	$http.get('http://yahoo-fin.herokuapp.com/now/AAPL').then(function(resp) {
 		// console.log('Success', resp);
@@ -281,7 +281,7 @@ angular.module('starter.controllers', [])
 	}, 700);
 
 	// Set Ink
-	ionic.material.ink.displayEffect();
+	ionicMaterialInk.displayEffect();
 
 	$http.get('http://yahoo-fin.herokuapp.com/now/AAPL').then(function(resp) {
 		// console.log('Success', resp);
@@ -312,7 +312,7 @@ angular.module('starter.controllers', [])
 	}, 200);
 
 	// Activate ink for controller
-	ionic.material.ink.displayEffect();
+	ionicMaterialInk.displayEffect();
 	$scope.tweets = [{
 		'tweet': 'The first smarthome gadgets that work with <strong>Apple\'s</strong> HomeKit will arrive next month: http://on.wsj.com/1IE0mTt  ',
 		'retweet': '21',
@@ -363,7 +363,7 @@ angular.module('starter.controllers', [])
 	$scope.$parent.setHeaderFab(false);
 
 	// Activate ink for controller
-	ionic.material.ink.displayEffect();
+	ionicMaterialInk.displayEffect();
 
 	ionic.material.motion.pushDown({
 		selector: '.push-down'
